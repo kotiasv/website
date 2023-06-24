@@ -2,7 +2,7 @@
     "name": "portfolio-website",
     "version": "1.0.0",
     "description": "",
-    "main": "index.ts",
+    "main": "index.js",
     "scripts": {
         "build": "npx tsc && cd client && npm run build",
         "start": "node dist/index.js",

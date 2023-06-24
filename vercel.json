@@ -2,24 +2,19 @@
     "version": 2,
     "builds": [
         {
-            "src": "*.js",
-            "use": "@vercel/node"
+            "src": "dist/index.js",
+            "use": "@vercel/node",
+            "config": {
+                "includeFiles": [
+                    "dist/**"
+                ]
+            }
         }
     ],
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "/"
-        }
-    ],
-    "rewrites": [
-        {
-            "source": "/api/:path(.*)",
-            "destination": "https://kotiasv.vercel.app/api/:path"
-        },
-        {
-            "source": "/(.*)",
-            "destination": "/"
+            "dest": "dist/index.js"
         }
     ]
 }
