@@ -1,14 +1,25 @@
 import { useEffect } from "react"
-import axios from "axios"
+import { Routes, Route, useNavigate } from "react-router-dom"
+import Home from "./pages/Home"
 
 const App = () => {
+    const navigate = useNavigate()
+    const path = location.pathname
+    const locations = ["/", "/test"]
+
     useEffect(() => {
-        axios.get("/api/projects").then(res => console.log(res.data))
+        if (locations.filter(routes => !path.includes(routes)).length)
+            navigate("/")
     }, [])
 
     return (
         <>
-            Project Structure
+            <Routes>
+                <Route
+                    path="/"
+                    element={<Home />}
+                />
+            </Routes>
         </>
     )
 }

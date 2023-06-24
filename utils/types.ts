@@ -16,8 +16,25 @@ type Middleware = (
     next: NextFunction
 ) => void
 
+type Projects = {
+    name: String,
+    description: String,
+    image: String,
+    link: String,
+    stack: String[]
+}[]
+
+type Socials = {
+    name: String,
+    image: String,
+    userUrl: String
+}[]
+
 export {
     ReqHandler,
     Middleware,
-    ErrorRequestHandler as ErrorMiddleware
+    ErrorRequestHandler as ErrorMiddleware,
+
+    Projects,
+    Socials
 }
