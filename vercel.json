@@ -14,7 +14,5 @@
             "source": "/github",
             "destination": "https://github.com/kotiasv"
         }
-    ],
-    "builCommand": "next build",
-    "installCommand": "npm install"
+    ]
 }
