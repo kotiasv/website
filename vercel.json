@@ -25,7 +25,10 @@
                 },
                 {
                     "key": "Access-Control-Allow-Origin",
-                    "value": "*"
+                    "value": [
+                        "https://kotiasv.vercel.app/",
+                        "https://website-git-replacement-kotiasv.vercel.app/"
+                    ]
                 },
                 {
                     "key": "Access-Control-Allow-Methods",
