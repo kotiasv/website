@@ -26,11 +26,14 @@ export const NavItems: navProps = [
 export const socials: socialsProp = [
     {
         title: "discord",
-        url: "/discord.png"
+        destination: "https://discordapp.com/users/511911643475738656",
+        url: "/discord.png",
+
     },
     {
         title: "github",
         url: "/github.png",
+        destination: "https://github.com/kotiasv",
         styles: "invert"
     }
 ]

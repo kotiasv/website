@@ -16,5 +16,6 @@ export type navProps = {
 export type socialsProp = {
     title: string
     url: string
+    destination: string
     styles?: string
 }[]
