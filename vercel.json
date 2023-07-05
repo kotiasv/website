@@ -1,20 +1,18 @@
 {
-    "version": 2,
-    "builds": [
+    "rewrites": [
         {
-            "src": "dist/index.js",
-            "use": "@vercel/node",
-            "config": {
-                "includeFiles": [
-                    "dist/**"
-                ]
-            }
+            "source": "/(.*)",
+            "destination": "/"
         }
     ],
-    "routes": [
+    "redirects": [
         {
-            "src": "/(.*)",
-            "dest": "dist/index.js"
+            "source": "/discord",
+            "destination": "https://discordapp.com/users/511911643475738656"
+        },
+        {
+            "source": "/github",
+            "destination": "https://github.com/kotiasv"
         }
     ]
 }
