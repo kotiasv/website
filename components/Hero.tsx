@@ -100,10 +100,10 @@ const Hero = () => {
                 </div>
                 <div className="flex gap-3 mb-2">
                     {socials.map((social, index) => (
-                        <Link
-                            href={social.title}
+                        <a
+                            onClick={() => window.location.assign(social.destination)}
                             key={`socials-${index}`}
-                            className={social.styles || ""}
+                            className={`${social.styles && "invert"} cursor-pointer`}
                         >
                             <Image
                                 src={social.url}
@@ -112,7 +112,7 @@ const Hero = () => {
                                 height={30}
                                 className={`hover:scale-[1.1] ease-in-out duration-500`}
                             />
-                        </Link>
+                        </a>
                     ))}
                 </div>
             </div>

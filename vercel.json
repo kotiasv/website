@@ -5,16 +5,6 @@
             "destination": "/"
         }
     ],
-    "redirects": [
-        {
-            "source": "/discord",
-            "destination": "https://discordapp.com/users/511911643475738656"
-        },
-        {
-            "source": "/github",
-            "destination": "https://github.com/kotiasv"
-        }
-    ],
     "headers": [
         {
             "source": "/api/(.*)",
