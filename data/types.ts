@@ -8,7 +8,6 @@ export type discordProps = {
     global: string
     imageUrl: string
     online: discordOnlineProps
-    statusColor: string
 }
 
 export type navProps = {

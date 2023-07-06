@@ -9,6 +9,13 @@ import { motion } from "framer-motion"
 import { socials } from "@/data"
 import { getDiscordData } from "@/data/discord"
 
+const statusColor = {
+    online: "bg-green-700",
+    idle: "bg-orange-400",
+    dnd: "bg-red-600",
+    offline: "bg-gray-800"
+}
+
 const Hero = () => {
     const [discordData, setDiscordData] = useState<null | discordProps>(null)
     const [date, setDate] = useState<null | string>(null)
@@ -81,7 +88,7 @@ const Hero = () => {
                     )}
                     {(discordData?.online && date) ? (
                         <span className="flex items-center gap-2 text-gray-500 mt-3 sm:mt-1">
-                            <div className={`rounded-full w-4 h-4 ${discordData.statusColor}`} />
+                            <div className={`rounded-full w-4 h-4 ${statusColor[discordData.online]}`} />
                             <p>{discordData?.online}</p>
                             •
                             <p>{date}</p>
