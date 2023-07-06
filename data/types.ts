@@ -1,11 +1,14 @@
+export type discordOnlineProps = "offline"
+    | "dnd"
+    | "idle"
+    | "online"
+
 export type discordProps = {
     username: string
     global: string
     imageUrl: string
-    online: string
-    status: string
-    session: string
-    activeOn: string
+    online: discordOnlineProps
+    statusColor: string
 }
 
 export type navProps = {
