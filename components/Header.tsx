@@ -71,6 +71,10 @@ const Header = () => {
                         ) : (
                             <HiOutlineMenuAlt3
                                 size="25px"
+                                style={{
+                                    WebkitTapHighlightColor: "transparent",
+
+                                }}
                                 onClick={() => setMenuState(!menuState)}
                             />
                         )}

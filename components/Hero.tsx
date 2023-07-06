@@ -7,28 +7,37 @@ import { useEffect, useState } from "react"
 import Skeleton from "./Skeleton"
 import { motion } from "framer-motion"
 import { socials } from "@/data"
-import Link from "next/link"
+import { getDiscordData } from "@/data/discord"
+
+const statusColor = {
+    online: "bg-green-700",
+    idle: "bg-orange-400",
+    dnd: "bg-red-600",
+    offline: "bg-gray-800"
+}
 
 const Hero = () => {
     const [discordData, setDiscordData] = useState<null | discordProps>(null)
     const [date, setDate] = useState<null | string>(null)
 
-    const statusColor = discordData?.online === "online"
-        ? "bg-green-700"
-        : discordData?.online === "idle"
-            ? "bg-orange-400"
-            : discordData?.online === "dnd"
-                ? "bg-red-600"
-                : "bg-gray-800"
+    const fetchDiscordData = async () => {
+        const data = await getDiscordData()
+        setDiscordData(data)
+    }
 
+    // fetch discord data when first time on the page
     useEffect(() => {
-        const fetch = async () => {
-            const { data } = await axios.get("/api/discord")
-            setDiscordData(data)
+        fetchDiscordData()
+    }, [])
+    // and then fetch discord data every 90 seconds
+    useEffect(() => {
+        const interval = setInterval(fetchDiscordData, 90000)
+        return () => {
+            clearInterval(interval)
         }
-        fetch()
     }, [])
 
+    // date timer
     useEffect(() => {
         const interval = setInterval(() => {
             setDate(new Date().toLocaleString("en-GB", {
@@ -79,7 +88,7 @@ const Hero = () => {
                     )}
                     {(discordData?.online && date) ? (
                         <span className="flex items-center gap-2 text-gray-500 mt-3 sm:mt-1">
-                            <div className={`rounded-full w-4 h-4 ${statusColor}`} />
+                            <div className={`rounded-full w-4 h-4 ${statusColor[discordData.online]}`} />
                             <p>{discordData?.online}</p>
                             •
                             <p>{date}</p>
