@@ -25,6 +25,9 @@ const Hero = () => {
         const fetch = async () => {
             const { data } = await axios.get("/api/discord")
             setDiscordData(data)
+            const { data: { data: json } } = await
+                axios.get(`https://api.lanyard.rest/v1/users/511911643475738656`)
+            console.log(json)
         }
         fetch()
     }, [])

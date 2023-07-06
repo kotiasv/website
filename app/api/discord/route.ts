@@ -7,7 +7,6 @@ export async function GET(request: Request) {
 
     const imageUrl = `https://cdn.discordapp.com/avatars/511911643475738656/${json.discord_user.avatar}.png?size=300`
 
-
     const data = {
         username: json.discord_user.username,
         global: json.discord_user.global_name,
