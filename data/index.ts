@@ -1,4 +1,4 @@
-import { navProps, socialsProp } from "./types";
+import { ProjectsProp, navProps, socialsProp } from "./types";
 
 export const NavItems: navProps = [
     {
@@ -9,10 +9,10 @@ export const NavItems: navProps = [
         title: "About",
         href: "#about"
     },
-    {
-        title: "Road",
-        href: "#road"
-    },
+    // {
+    //     title: "Road",
+    //     href: "#road"
+    // },
     {
         title: "Projects",
         href: "#projects"
@@ -35,5 +35,16 @@ export const socials: socialsProp = [
         url: "/github.png",
         destination: "https://github.com/kotiasv",
         styles: "invert"
+    }
+]
+
+export const projects: ProjectsProp = [
+    {
+        title: "Portfolio",
+        desc: "My personal website",
+        stack: [
+            "Next.js",
+            "Typescript"
+        ]
     }
 ]

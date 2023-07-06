@@ -53,6 +53,7 @@ const Header = () => {
         <motion.header
             className="fixed top-0 w-[100%] mx-auto border-b-[1px] border-b-[#141414]"
             initial={{ opacity: 0, y: -20 }}
+            viewport={{ once: true }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ ease: "easeInOut", duration: .3 }}
         >
@@ -82,7 +83,7 @@ const Header = () => {
                 </div>
             </div>
             <motion.div
-                className={`fixed top-[55px] w-[200px] bg-[#141414] ${menuState ? "block" : "hidden"} rounded-md rounded-se-none p-3`}
+                className={`fixed top-[55px] w-[200px] bg-[#141414] ${menuState ? "block" : "hidden"} rounded-md rounded-se-none p-3 z-10`}
                 style={{
                     right: windowWidth >= 1200
                         ? (windowWidth - 1100) / 2

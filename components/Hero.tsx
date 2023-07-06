@@ -1,7 +1,6 @@
 "use client"
 
 import { discordProps } from "@/data/types"
-import axios from "axios"
 import Image from "next/image"
 import { useEffect, useState } from "react"
 import Skeleton from "./Skeleton"
@@ -56,8 +55,9 @@ const Hero = () => {
 
     return (
         <motion.section
-            className="flex flex-col-reverse hero:flex-row hero:justify-around pt-4"
+            className="flex flex-col-reverse hero:flex-row hero:justify-around pt-4 mt-28"
             initial={{ opacity: 0, y: -20 }}
+            viewport={{ once: true }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ ease: "easeInOut", duration: .3 }}
         >

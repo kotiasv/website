@@ -21,3 +21,9 @@ export type socialsProp = {
     destination: string
     styles?: string
 }[]
+
+export type ProjectsProp = {
+    title: string
+    desc: string
+    stack: string[]
+}[]
