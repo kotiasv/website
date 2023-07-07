@@ -51,7 +51,7 @@ const Header = () => {
 
     return (
         <motion.header
-            className="fixed top-0 w-[100%] mx-auto border-b-[1px] border-b-[#141414]"
+            className="fixed top-0 w-[100%] mx-auto border-b-[1px] border-b-[#141414] z-50"
             initial={{ opacity: 0, y: -20 }}
             viewport={{ once: true }}
             whileInView={{ opacity: 1, y: 0 }}

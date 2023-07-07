@@ -14,12 +14,12 @@ export const NavItems: navProps = [
     //     href: "#road"
     // },
     {
-        title: "Projects",
-        href: "#projects"
-    },
-    {
         title: "Skills",
         href: "#skills"
+    },
+    {
+        title: "Projects",
+        href: "#projects"
     },
 ]
 
@@ -40,11 +40,23 @@ export const socials: socialsProp = [
 
 export const projects: ProjectsProp = [
     {
-        title: "Portfolio",
+        title: "Kotiasv",
         desc: "My personal website",
         stack: [
             "Next.js",
+            "React",
             "Typescript"
-        ]
+        ],
+        link: "https://github.com/kotiasv/website"
+    },
+    {
+        title: "Dimitri Portfolio",
+        desc: "Freelancer's website",
+        stack: [
+            "Vite",
+            "React",
+            "ThreeJS"
+        ],
+        link: "https://github.com/kotiasv/adrian-portfolio"
     }
 ]

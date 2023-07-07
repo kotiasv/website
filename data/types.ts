@@ -25,5 +25,6 @@ export type socialsProp = {
 export type ProjectsProp = {
     title: string
     desc: string
-    stack: string[]
+    stack: string[],
+    link: string
 }[]

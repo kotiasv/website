@@ -110,7 +110,7 @@ const Hero = () => {
                 <div className="flex gap-3 mb-2">
                     {socials.map((social, index) => (
                         <a
-                            onClick={() => window.location.assign(social.destination)}
+                            onClick={() => window.open(social.destination)}
                             key={`socials-${index}`}
                             className={`${social.styles && "invert"} cursor-pointer`}
                         >
