@@ -54,7 +54,7 @@ const Hero = () => {
     }, [])
 
     return (
-        <Motion>
+        <Motion init={-30}>
             <div
                 className="flex flex-col-reverse hero:flex-row hero:justify-around pt-4 mt-28"
             >

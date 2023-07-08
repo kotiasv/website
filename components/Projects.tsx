@@ -6,7 +6,7 @@ import Motion from "./Motion"
 
 const Projects = () => {
     return (
-        <Motion>
+        <Motion init={-50}>
             <div
                 className="mt-28"
                 id="projects"

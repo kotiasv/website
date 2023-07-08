@@ -100,7 +100,7 @@ const Skills = () => {
     ]
 
     return (
-        <Motion>
+        <Motion init={-45}>
             <div
                 className="mt-28"
                 id="skills"
