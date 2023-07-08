@@ -1,6 +1,5 @@
 "use client"
 
-import { motion } from "framer-motion"
 import Image from "next/image"
 import {
     SiGit,
@@ -19,6 +18,7 @@ import {
     SiVercel,
     SiAtom
 } from "react-icons/si"
+import Motion from "./Motion"
 
 const Skills = () => {
     const skills = [
@@ -59,6 +59,7 @@ const Skills = () => {
                     width={64}
                     height={64}
                     alt="Vite"
+                    className="select-none"
                 />
                 <SiExpress className="w-16 h-16" />
             </>)
@@ -87,31 +88,36 @@ const Skills = () => {
             title: "Hosting",
             value: (<>
                 <SiVercel className="w-16 h-16" />
+                <Image
+                    src="/hop.png"
+                    width={64}
+                    height={64}
+                    alt="Vite"
+                    className="select-none"
+                />
             </>)
         },
     ]
 
     return (
-        <motion.section
-            className="mt-28"
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ ease: "easeInOut", duration: .3 }}
-            viewport={{ once: true }}
-            id="skills"
-        >
-            <h2 className="text-5xl h-16 sm:text-6xl text-transparent bg-clip-text bg-gradient-to-br from-[#8399c0] to-[#161923]">
-                Skills
-            </h2>
-            <div className="flex flex-wrap my-7 gap-11 sm:gap-10 ml-3 sm:justify-center md:gap-16">
-                {skills.map(skill => (
-                    <div key={skill.title}>
-                        <h3 className="text-2xl sm:text-3xl">{skill.title}</h3>
-                        <div className="flex mt-2 sm:mt-4 gap-3">{skill.value}</div>
-                    </div>
-                ))}
+        <Motion>
+            <div
+                className="mt-28"
+                id="skills"
+            >
+                <h2 className="text-5xl h-16 sm:text-6xl text-transparent bg-clip-text bg-gradient-to-br from-[#161923] to-[#8399c0] dark:from-[#8399c0] dark:to-[#161923]">
+                    Skills
+                </h2>
+                <div className="flex flex-wrap my-7 gap-11 sm:gap-10 ml-3 sm:justify-center md:gap-16">
+                    {skills.map(skill => (
+                        <div key={skill.title}>
+                            <h3 className="text-2xl sm:text-3xl">{skill.title}</h3>
+                            <div className="flex mt-2 sm:mt-4 gap-3">{skill.value}</div>
+                        </div>
+                    ))}
+                </div>
             </div>
-        </motion.section>
+        </Motion>
     )
 }
 

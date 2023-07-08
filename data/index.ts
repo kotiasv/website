@@ -57,6 +57,6 @@ export const projects: ProjectsProp = [
             "React",
             "ThreeJS"
         ],
-        link: "https://github.com/kotiasv/adrian-portfolio"
+        link: "https://github.com/kotiasv/dimitri-portfolio"
     }
 ]
