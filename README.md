@@ -1,34 +1,22 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# With ♥ by Kotiasv
 
-## Getting Started
+My personal site website written in Next.js using TypeScript.
 
-First, run the development server:
+## Project Structure
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+All website sections are different components inside `components/`. This components are being used in `app/page.tsx`.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+`components/Header.tsx` use `hooks/theme.ts` for changing theme.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+For getting discord data I use [Lanyard API](https://github.com/Phineas/lanyard) (`data/discord.ts`).
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Some components require data from `data/index.ts`. All data types inside `data/types.ts`.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## Contributions
 
--   [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
--   [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project is Open Source. Your feedback and contributions are welcome here.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Thanks
 
-## Ideas for website
-
-https://realtimecolors.com/
-https://instict.dev/
-https://bepatrickdavid.com/
+[@Insticthere](https://github.com/Insticthere) for open sourcing [his website](https://github.com/Insticthere/Instict.dev)!
