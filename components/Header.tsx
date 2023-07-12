@@ -19,8 +19,6 @@ const Header = () => {
         ? context.setDarkMode
         : () => console.error("Theme Hook Error")
 
-    const darkMode = context?.darkMode
-
     const handleChange = () => {
         if (menuState) setMenuState(!menuState)
     }
