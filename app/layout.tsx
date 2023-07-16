@@ -1,15 +1,21 @@
 "use client"
 
-import { ReactNode, useState } from "react"
+import { ReactNode, useState, useEffect } from "react"
 import "./globals.css"
 import { ThemeContext } from "@/hooks/theme"
 
 const Layout = ({ children }: { children: ReactNode }) => {
-    const local: boolean = window.localStorage.theme !== undefined
-        ? JSON.parse(window.localStorage.theme)
-        : true
+    const [darkMode, setDarkMode] = useState<boolean>(true)
 
-    const [darkMode, setDarkMode] = useState<boolean>(local)
+    useEffect(() => {
+        let local: boolean = true
+        try {
+            local = window.localStorage.theme !== undefined
+                ? JSON.parse(window.localStorage.theme)
+                : true
+            setDarkMode(local)
+        } catch (error) { }
+    }, [])
 
     const setMode = (isDarkMode: boolean) => {
         localStorage.setItem("theme", JSON.stringify(isDarkMode))
