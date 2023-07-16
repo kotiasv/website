@@ -44,9 +44,13 @@ const Skills = () => {
         },
         {
             title: "Databases",
-            value: (<>
+            value: (<div className="flex">
                 <SiMongodb className="w-16 h-16 text-green-500" />
-            </>)
+                <img
+                    src="/grafbase.png"
+                    className="select-none w-16"
+                />
+            </div>)
         },
         {
             title: "Frameworks",
@@ -111,8 +115,12 @@ const Skills = () => {
                 <div className="flex flex-wrap my-7 gap-11 sm:gap-10 ml-3 sm:justify-center md:gap-16">
                     {skills.map(skill => (
                         <div key={skill.title}>
-                            <h3 className="text-2xl sm:text-3xl">{skill.title}</h3>
-                            <div className="flex mt-2 sm:mt-4 gap-3">{skill.value}</div>
+                            <h3 className="text-2xl sm:text-3xl">
+                                {skill.title}
+                            </h3>
+                            <div className="flex mt-2 sm:mt-4 gap-3">
+                                {skill.value}
+                            </div>
                         </div>
                     ))}
                 </div>
