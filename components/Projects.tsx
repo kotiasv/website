@@ -24,10 +24,10 @@ const Projects = () => {
                             <h3 className="text-3xl">
                                 {project.title}
                             </h3>
-                            <p className="mt-2 ml-3 text-2xl md:min-w-[400px] max-w-[300px] text-gray-800 dark:text-gray-300">
+                            <p className="mt-2 ml-3 text-2xl md:min-w-[400px] max-w-[300px] text-gray-800 dark:text-gray-300 mb-8">
                                 {project.desc}
                             </p>
-                            <ul className="flex mt-4 ml-3 gap-2 text-gray-600 dark:text-gray-400">
+                            <ul className="flex absolute gap-2 text-gray-600 dark:text-gray-400 left-2 bottom-2">
                                 {project.stack.map((tech, i) => {
                                     const isLast =
                                         project.stack.length - 1 == i

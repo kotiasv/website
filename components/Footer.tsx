@@ -18,7 +18,7 @@ const Footer = () => {
                     <a className="text-back dark:text-gray-500 cursor-pointer"
                         onClick={() => window.open(link)}
                     >
-                        Open Sourced
+                        Open Source
                     </a>
                 </p>
             </div>

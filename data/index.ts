@@ -50,12 +50,12 @@ export const projects: ProjectsProp = [
         link: "https://github.com/kotiasv/website"
     },
     {
-        title: "Dimitri Portfolio",
-        desc: "Freelancer's website",
+        title: "Promptshare",
+        desc: "Share and view chatGPT prompts",
         stack: [
-            "Vite",
-            "React",
-            "ThreeJS"
+            "Next.js",
+            "Typescript",
+            "Grafbase"
         ],
         link: "https://github.com/kotiasv/dimitri-portfolio"
     }
