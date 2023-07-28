@@ -29,7 +29,10 @@ const Layout = ({ children }: { children: ReactNode }) => {
                 <meta name="description" content="My personal website!" />
             </head>
             <ThemeContext.Provider value={{ darkMode, setDarkMode: setMode }}>
-                <body className="transition-colors duration-300 bg-[#f9f9f9] text-back dark:bg-back dark:text-white">
+                <body
+                    className="transition-colors duration-300 bg-[#f9f9f9] text-back dark:bg-back dark:text-white"
+                    suppressHydrationWarning={true}
+                >
                     {children}
                 </body>
             </ThemeContext.Provider>

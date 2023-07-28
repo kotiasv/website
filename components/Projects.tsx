@@ -14,20 +14,20 @@ const Projects = () => {
                 <h2 className="text-5xl h-16 sm:text-6xl text-transparent bg-clip-text bg-gradient-to-tr from-[#161923] to-[#8399c0] dark:from-[#8399c0] dark:to-[#161923]">
                     Projects
                 </h2>
-                <div className="flex flex-wrap gap-10 projects:justify-center sm:ml-4 mt-9">
+                <div className="columns-1 lg:columns-2 mt-9">
                     {projects.map((project, index) => (
                         <div
-                            className="relative border-[0.1px] border-[#0a0a0c] dark:border-none dark:bg-[#121212] w-[100%] md:w-[700px] projects:w-[500px] p-3 rounded-lg hover:scale-[1.015] transition-transform duration-300 cursor-pointer"
+                            className="relative mx-auto border-[0.1px] border-[#0a0a0c] dark:border-none dark:bg-[#121212] w-[100%] md:w-[700px] lg:w-[485px] projects:w-[520px] p-3 rounded-lg hover:scale-[1.015] transition-transform duration-300 cursor-pointer mb-5 break-inside-avoid"
                             key={`project-${index}`}
                             onClick={() => window.open(project.link)}
                         >
                             <h3 className="text-3xl">
                                 {project.title}
                             </h3>
-                            <p className="mt-2 ml-3 text-2xl md:min-w-[400px] max-w-[300px] text-gray-800 dark:text-gray-300 mb-8">
+                            <p className="mt-2 ml-3 text-2xl md:min-w-[400px] max-w-[300px] text-gray-800 dark:text-gray-300">
                                 {project.desc}
                             </p>
-                            <ul className="flex absolute gap-2 text-gray-600 dark:text-gray-400 left-2 bottom-2">
+                            <ul className="mt-4 flex flex-wrap text-gray-600 dark:text-gray-400">
                                 {project.stack.map((tech, i) => {
                                     const isLast =
                                         project.stack.length - 1 == i
@@ -40,7 +40,7 @@ const Projects = () => {
                                             <li>
                                                 {tech}
                                             </li>
-                                            <li className={`${isLast ? "hidden" : "block"}`}>
+                                            <li className={`${isLast ? "hidden" : "block"} mr-2`}>
                                                 •
                                             </li>
                                         </div>

@@ -118,7 +118,7 @@ const Skills = () => {
                             <h3 className="text-2xl sm:text-3xl">
                                 {skill.title}
                             </h3>
-                            <div className="flex mt-2 sm:mt-4 gap-3">
+                            <div className="flex flex-wrap mt-2 sm:mt-4 gap-3">
                                 {skill.value}
                             </div>
                         </div>

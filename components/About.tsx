@@ -23,10 +23,10 @@ const About = () => {
                         }} />
                     </h3>
                     <p className="max-w-md sm:max-w-3xl text-[22px] mt-2">
-                        My name is Vlad and I'm a (beginner) Software Engineer from Russia. I'm Open Source Lover and enjoy the idea of explaining where and how you can use the code. Besides programming, I'm really interested in gaming and music. (lofi, different types of phonk, future bass, etc)
+                        My name is Vlad and I'm a (beginner) Software Engineer from Russia. I'm Open Source Lover and enjoy the idea of explaining where and how you can use certain code. My principles of development are YAGNI, KISS and SOLID. Besides programming, I'm really interested in gaming and music. (lofi, different types of phonk, future bass, etc)
                     </p>
                     <p className="max-w-md sm:max-w-3xl text-[22px] mt-7">
-                        My main goal is to become a really good programmer and work in the top companies, making enough money to live comfortably and also filming "A Day In Life as a Software Engineer".
+                        My main goal is to become a really good programmer and work in the top companies, making enough money to live comfortably.
                     </p>
                 </div>
             </div>

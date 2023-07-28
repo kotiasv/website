@@ -61,7 +61,7 @@ const Hero = () => {
                 <div className="flex flex-col gap-8 sm:justify-between">
                     <div>
                         {discordData?.username ? (
-                            <h1 className="text-6xl sm:text-7xl mt-4">
+                            <h1 className="text-5xl xs:text-6xl sm:text-7xl mt-4">
                                 {discordData.username}
                             </h1>
                         ) : (
@@ -84,11 +84,11 @@ const Hero = () => {
                             </span>
                         )}
                         {(discordData?.online && date) ? (
-                            <span className="flex items-center gap-2 text-gray-600 dark:text-gray-500 mt-3 sm:mt-1">
+                            <span className="text-lg xs:text-xl flex items-center gap-2 text-gray-600 dark:text-gray-500 mt-3 sm:mt-1">
                                 <div className={`rounded-full w-4 h-4 ${statusColor[discordData.online]}`} />
                                 <p>{discordData?.online}</p>
                                 •
-                                <p>{date}</p>
+                                <p className="">{date}</p>
                             </span>
                         ) : (
                             <span className="flex gap-2 items-center mt-4 sm:mt-1">

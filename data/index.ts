@@ -57,6 +57,6 @@ export const projects: ProjectsProp = [
             "Typescript",
             "Grafbase"
         ],
-        link: "https://github.com/kotiasv/dimitri-portfolio"
+        link: "https://github.com/kotiasv/promptshare"
     }
 ]
