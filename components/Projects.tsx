@@ -5,7 +5,7 @@ import { ProjectProps } from "@/data/types"
 
 const Projects = async () => {
     const repos: ProjectProps[] | [] = await getPinnedRepos()
-
+    console.log("Projects:", repos)
     return (
         <Motion init={-50}>
             <div className="mt-28" id="projects">
