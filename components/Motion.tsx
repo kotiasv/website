@@ -3,9 +3,13 @@
 import { motion } from "framer-motion"
 import { ReactNode } from "react"
 
-const Motion = ({ children, duration, init }: {
-    children: ReactNode,
-    duration?: number,
+const Motion = ({
+    children,
+    duration,
+    init,
+}: {
+    children: ReactNode
+    duration?: number
     init?: number
 }) => {
     return (
@@ -13,7 +17,7 @@ const Motion = ({ children, duration, init }: {
             initial={{ opacity: 0, y: init || -20 }}
             viewport={{ once: true }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ ease: "easeInOut", duration: duration || .5 }}
+            transition={{ ease: "easeInOut", duration: duration || 0.5 }}
         >
             {children}
         </motion.section>

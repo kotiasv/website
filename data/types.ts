@@ -1,7 +1,4 @@
-export type discordOnlineProps = "offline"
-    | "dnd"
-    | "idle"
-    | "online"
+export type discordOnlineProps = "offline" | "dnd" | "idle" | "online"
 
 export type discordProps = {
     username: string
@@ -22,9 +19,13 @@ export type socialsProp = {
     styles?: string
 }[]
 
-export type ProjectsProp = {
-    title: string
-    desc: string
-    stack: string[],
-    link: string
-}[]
+export type ProjectProps = {
+    name: string
+    url: string
+    primaryLanguage: {
+        name: string
+        color: string
+    }
+    description: string
+    homepageUrl: string
+}

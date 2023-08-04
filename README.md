@@ -12,7 +12,6 @@ For getting discord data I use [Lanyard API](https://github.com/Phineas/lanyard)
 
 Some components require data from `data/index.ts`. All data types inside `data/types.ts`.
 
-
 ## Contributions
 
 This project is Open Source. Your feedback and contributions are welcome here.

@@ -5,14 +5,14 @@ import Image from "next/image"
 import { useEffect, useState } from "react"
 import Skeleton from "./Skeleton"
 import { socials } from "@/data"
-import { getDiscordData } from "@/data/discord"
+import { getDiscordData } from "@/lib/discord"
 import Motion from "./Motion"
 
 const statusColor = {
     online: "bg-green-700",
     idle: "bg-orange-400",
     dnd: "bg-red-600",
-    offline: "bg-gray-800"
+    offline: "bg-gray-800",
 }
 
 const Hero = () => {
@@ -39,14 +39,16 @@ const Hero = () => {
     // date timer
     useEffect(() => {
         const interval = setInterval(() => {
-            setDate(new Date().toLocaleString("en-GB", {
-                day: "numeric",
-                month: "short",
-                year: "numeric",
-                hour: "numeric",
-                minute: "2-digit",
-                second: "2-digit"
-            }))
+            setDate(
+                new Date().toLocaleString("en-GB", {
+                    day: "numeric",
+                    month: "short",
+                    year: "numeric",
+                    hour: "numeric",
+                    minute: "2-digit",
+                    second: "2-digit",
+                })
+            )
         }, 1000)
         return () => {
             clearInterval(interval)
@@ -55,9 +57,7 @@ const Hero = () => {
 
     return (
         <Motion init={-30}>
-            <div
-                className="flex flex-col-reverse hero:flex-row hero:justify-around pt-4 mt-28"
-            >
+            <div className="flex flex-col-reverse hero:flex-row hero:justify-around pt-4 mt-28">
                 <div className="flex flex-col gap-8 sm:justify-between">
                     <div>
                         {discordData?.username ? (
@@ -66,9 +66,7 @@ const Hero = () => {
                             </h1>
                         ) : (
                             <span className="inline-block">
-                                <Skeleton
-                                    className="sm:w-[400px] sm:h-[60px] w-[340px] h-[45px] mt-6"
-                                />
+                                <Skeleton className="sm:w-[400px] sm:h-[60px] w-[340px] h-[45px] mt-6" />
                             </span>
                         )}
                         {discordData?.global ? (
@@ -83,11 +81,14 @@ const Hero = () => {
                                 />
                             </span>
                         )}
-                        {(discordData?.online && date) ? (
+                        {discordData?.online && date ? (
                             <span className="text-lg xs:text-xl flex items-center gap-2 text-gray-600 dark:text-gray-500 mt-3 sm:mt-1">
-                                <div className={`rounded-full w-4 h-4 ${statusColor[discordData.online]}`} />
-                                <p>{discordData?.online}</p>
-                                •
+                                <div
+                                    className={`rounded-full w-4 h-4 ${
+                                        statusColor[discordData.online]
+                                    }`}
+                                />
+                                <p>{discordData?.online}</p>•
                                 <p className="">{date}</p>
                             </span>
                         ) : (
@@ -97,10 +98,7 @@ const Hero = () => {
                                     height={18}
                                     width={18}
                                 />
-                                <Skeleton
-                                    height={25}
-                                    width={300}
-                                />
+                                <Skeleton height={25} width={300} />
                             </span>
                         )}
                     </div>
@@ -109,7 +107,9 @@ const Hero = () => {
                             <a
                                 onClick={() => window.open(social.destination)}
                                 key={`socials-${index}`}
-                                className={`${social.styles && "dark:invert"} cursor-pointer`}
+                                className={`${
+                                    social.styles && "dark:invert"
+                                } cursor-pointer`}
                             >
                                 <Image
                                     src={social.url}
@@ -131,11 +131,7 @@ const Hero = () => {
                         alt="Logo"
                     />
                 ) : (
-                    <Skeleton
-                        height={250}
-                        width={250}
-                        className="rounded-xl"
-                    />
+                    <Skeleton height={250} width={250} className="rounded-xl" />
                 )}
             </div>
         </Motion>

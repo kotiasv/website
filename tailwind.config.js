@@ -14,21 +14,19 @@ module.exports = {
                     "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
             },
             textColor: {
-                "back": "#0a0a0c"
+                back: "#0a0a0c",
             },
             backgroundColor: {
-                "back": "#0a0a0c",
-                "header": "#141414"
+                back: "#0a0a0c",
+                header: "#141414",
             },
-            fontFamily: {
-                
-            },
+            fontFamily: {},
             screens: {
-                "xs": "450px",
+                xs: "450px",
                 "3xl": "1800px",
-                "hero": "740px",
-                "projects": "1103px"
-            }
+                hero: "740px",
+                projects: "1103px",
+            },
         },
     },
     plugins: [],
