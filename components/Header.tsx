@@ -50,7 +50,7 @@ const Header = () => {
 
     return (
         <motion.header
-            className="fixed top-0 w-[100%] mx-auto border-b-[1px] dark:border-b-[#141414] z-50"
+            className="fixed top-0 w-[100%] mx-auto border-b-[1px] dark:border-b-[#141414] z-40"
             initial={{ opacity: 0, y: -20 }}
             viewport={{ once: true }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -61,9 +61,8 @@ const Header = () => {
                     <p className="dark:text-gray-400 cursor-default w-[30px]">
                         ${" "}
                         <span
-                            className={`dark:text-gray-400 ${
-                                cmd ? "inline-block" : "hidden"
-                            }`}
+                            className={`dark:text-gray-400 ${cmd ? "inline-block" : "hidden"
+                                }`}
                         >
                             _
                         </span>
@@ -90,9 +89,8 @@ const Header = () => {
                 </div>
             </div>
             <motion.div
-                className={`fixed top-[55px] w-[200px] border-[#0a0a0c] border-[0.1px] dark:border-none bg-[#ffffff] dark:bg-[#141414] ${
-                    menuState ? "block" : "hidden"
-                } rounded-md rounded-se-none p-3 z-10`}
+                className={`fixed top-[55px] w-[200px] border-[#0a0a0c] border-[0.1px] dark:border-none bg-[#ffffff] dark:bg-[#141414] ${menuState ? "block" : "hidden"
+                    } rounded-md rounded-se-none p-3 z-10`}
                 style={{
                     right: windowWidth >= 1200 ? (windowWidth - 1100) / 2 : 50,
                 }}
