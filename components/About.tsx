@@ -30,8 +30,7 @@ const About = () => {
                     </p>
                     <p className="max-w-md sm:max-w-3xl text-[22px] mt-7">
                         My main goal is to become a really good programmer and
-                        work in the top companies, making enough money to live
-                        comfortably.
+                        work in the top companies, making enough money to live in comfort.
                     </p>
                 </div>
             </div>

@@ -32,7 +32,7 @@ const Grid = () => {
     })
 
     const Tile = () => {
-        return <div className="tile bg-back" />
+        return <div className="tile bg-white dark:bg-back" />
     }
 
     const TileNet = () =>
