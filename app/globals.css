@@ -2,17 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat&display=swap");
-
 /* *,
 *:before,
 *:after {
   @apply cursor-default;
 } */
 
+@layer components {
+    .about {
+        @apply max-w-md sm:max-w-3xl text-[22px]
+    }
+}
+
 body {
     font-size: 20px;
-    font-family: "Montserrat", sans-serif;
 }
 
 html {

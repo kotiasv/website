@@ -6,5 +6,5 @@ export async function getPinnedRepos() {
     const token = process.env.NEXT_PUBLIC_GITHUB_TOKEN
     client.setToken(token as string)
 
-    return await client.getPinnedRepos("kotiasv")
+    return await client.getPinnedRepos("vshakitskiy")
 }

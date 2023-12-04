@@ -3,9 +3,9 @@
 import { HiOutlineMenuAlt3 } from "react-icons/hi"
 import { IoMdClose } from "react-icons/io"
 import { MdDarkMode, MdLightMode } from "react-icons/md"
-import { motion } from "framer-motion"
+import { AnimatePresence, motion } from "framer-motion"
 import Link from "next/link"
-import { useState, useEffect } from "react"
+import { useState, useEffect, MouseEventHandler } from "react"
 import { NavItems } from "@/data"
 import { useTheme } from "next-themes"
 
@@ -14,6 +14,11 @@ const Header = () => {
     const [cmd, setCmd] = useState(true)
     const [windowWidth, setWindowWidth] = useState(0)
     const { setTheme } = useTheme()
+
+    const handleTheme = (theme: "light" | "dark") => {
+        setTheme(theme)
+        handleChange()
+    }
 
     const handleChange = () => {
         if (menuState) setMenuState(!menuState)
@@ -61,8 +66,11 @@ const Header = () => {
                     <p className="dark:text-gray-400 cursor-default w-[30px]">
                         ${" "}
                         <span
-                            className={`dark:text-gray-400 ${cmd ? "inline-block" : "hidden"
-                                }`}
+                            className={`dark:text-gray-400 ${cmd
+                                ? "inline-block"
+                                : "hidden"
+                                }`
+                            }
                         >
                             _
                         </span>
@@ -88,45 +96,43 @@ const Header = () => {
                     </div>
                 </div>
             </div>
-            <motion.div
-                className={`fixed top-[55px] w-[200px] border-[#0a0a0c] border-[0.1px] dark:border-none bg-[#ffffff] dark:bg-[#141414] ${menuState ? "block" : "hidden"
-                    } rounded-md rounded-se-none p-3 z-10`}
-                style={{
-                    right: windowWidth >= 1200 ? (windowWidth - 1100) / 2 : 50,
-                }}
-                initial={{ opacity: 0, y: -10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ ease: "easeInOut", duration: 0.2 }}
-            >
-                <div className="sm:hidden flex flex-col gap-3">
-                    <Navbar val="menu" />
-                </div>
-                <div className="sm:hidden flex bg-white mx-auto h-[1px] my-3" />
-                <div className="mb-2 cursor-default">Themes</div>
-                <div className="flex flex-col ml-2 gap-1">
-                    <div
-                        className="flex cursor-pointer items-center gap-2 dark:text-[#d2d2d2]"
-                        onClick={() => {
-                            setTheme("dark")
-                            handleChange()
+            <AnimatePresence>
+                {menuState && (
+                    <motion.div
+                        className={`fixed top-[55px] w-[200px] border-[#0a0a0c] border-[0.1px] dark:border-none bg-[#ffffff] dark:bg-[#141414] rounded-md rounded-se-none p-3 z-10`}
+                        style={{
+                            right: windowWidth >= 1200 ? (windowWidth - 1100) / 2 : 50,
                         }}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ ease: "easeInOut", duration: 0.4 }}
+                        exit={{ opacity: 0, y: 20 }}
                     >
-                        <MdDarkMode size={25} className="cursor-pointer" />
-                        Dark
-                    </div>
-                    <div
-                        className="flex cursor-pointer items-center gap-2 dark:text-[#d2d2d2]"
-                        onClick={() => {
-                            setTheme("light")
-                            handleChange()
-                        }}
-                    >
-                        <MdLightMode size={25} className="cursor-pointer" />
-                        Light
-                    </div>
-                </div>
-            </motion.div>
-        </motion.header>
+                        <div className="sm:hidden flex flex-col gap-3">
+                            <Navbar val="menu" />
+                        </div>
+                        <div className="sm:hidden flex bg-white mx-auto h-[1px] my-3" />
+                        <div className="mb-2 cursor-default">Themes</div>
+                        <div className="flex flex-col ml-2 gap-1">
+                            <div
+                                className="flex cursor-pointer items-center gap-2 dark:text-[#d2d2d2]"
+                                onClick={() => handleTheme("dark")}
+                            >
+                                <MdDarkMode size={25} className="cursor-pointer" />
+                                Dark
+                            </div>
+                            <div
+                                className="flex cursor-pointer items-center gap-2 dark:text-[#d2d2d2]"
+                                onClick={() => handleTheme("light")}
+                            >
+                                <MdLightMode size={25} className="cursor-pointer" />
+                                Light
+                            </div>
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </motion.header >
     )
 }
 

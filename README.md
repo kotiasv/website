@@ -1,10 +1,8 @@
-# With ♥ by Kotiasv
+# With ♥ by vshakitskiy
 
 My personal site website written in Next.js using TypeScript.
 
 ## Project Structure
-
-All website sections are different components inside `components/`. This components are being used in `app/page.tsx`.
 
 `components/Header.tsx` use `hooks/theme.ts` for changing theme.
 

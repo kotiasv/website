@@ -11,12 +11,12 @@ const Footer = () => {
                 <h2 className="flex">
                     With
                     <AiOutlineHeart className="text-red-500 text-3xl mx-1" />
-                    by Kotiasv
+                    by <b className="ml-1">vshakitskiy</b>
                 </h2>
-                <p className="flex gap-2 text-gray-600 dark:text-gray-300">
+                <p className="flex gap-2 text-gray-600 dark:text-gray-400">
                     This website is
                     <a
-                        className="text-back dark:text-gray-500 cursor-pointer"
+                        className="text-back dark:text-white cursor-pointer"
                         onClick={() => window.open(link)}
                     >
                         Open Source

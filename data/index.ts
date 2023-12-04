@@ -32,7 +32,7 @@ export const socials: socialsProp = [
     {
         title: "github",
         url: "/github.png",
-        destination: "https://github.com/kotiasv",
+        destination: "https://github.com/vshakitskiy",
         styles: "invert",
     },
 ]

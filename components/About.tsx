@@ -19,18 +19,16 @@ const About = () => {
                             }}
                         />
                     </h3>
-                    <p className="max-w-md sm:max-w-3xl text-[22px] mt-2">
-                        My name is Vlad and I'm a (beginner) Software Engineer
-                        from Russia. I'm Open Source Lover and enjoy the idea of
-                        explaining where and how you can use certain code. My
-                        principles of development are YAGNI, KISS and SOLID.
+                    <p className="about mt-2">
+                        My name is Vlad and I'm a Information Technology student
+                        from Russia. I've been programming for 3 years now,
+                        and I'm currently spending time creating pet projects.
                         Besides programming, I'm really interested in gaming and
-                        music. (lofi, different types of phonk, future bass,
-                        etc)
+                        music.
                     </p>
-                    <p className="max-w-md sm:max-w-3xl text-[22px] mt-7">
-                        My main goal is to become a really good programmer and
-                        work in the top companies, making enough money to live in comfort.
+                    <p className="about mt-7">
+                        My main goal is to become a really good Software Engineer and
+                        work in the top companies!
                     </p>
                 </div>
             </div>

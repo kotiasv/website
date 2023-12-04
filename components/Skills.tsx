@@ -2,21 +2,21 @@
 
 import Image from "next/image"
 import {
-    SiGit,
-    SiGithub,
     SiJavascript,
-    SiMongodb,
-    SiNextdotjs,
-    SiNodedotjs,
-    SiReact,
-    SiTailwindcss,
     SiTypescript,
-    SiVisualstudiocode,
-    SiNpm,
+    SiReact,
+    SiNodedotjs,
+    SiMongodb,
+    SiPrisma,
+    SiNextdotjs,
+    SiTailwindcss,
     SiExpress,
-    SiPostman,
-    SiVercel,
+    SiGithub,
+    SiNpm,
+    SiGit,
+    SiVisualstudiocode,
     SiAtom,
+    SiVercel
 } from "react-icons/si"
 import Motion from "./Motion"
 
@@ -40,11 +40,10 @@ const Skills = () => {
             ),
         },
         {
-            title: "Platforms",
+            title: "Runtimes",
             value: (
                 <>
                     <SiNodedotjs className="w-16 h-16 text-green-500" />
-                    <SiPostman className="w-16 h-16 text-orange-500" />
                 </>
             ),
         },
@@ -53,7 +52,8 @@ const Skills = () => {
             value: (
                 <div className="flex">
                     <SiMongodb className="w-16 h-16 text-green-500" />
-                    <img src="/grafbase.png" className="select-none w-16" />
+                    <SiPrisma className="w-16 h-16 ml-1" />
+                    {/* <img src="/grafbase.png" className="select-none w-16" /> */}
                 </div>
             ),
         },
@@ -63,7 +63,6 @@ const Skills = () => {
                 <>
                     <SiNextdotjs className="w-16 h-16" />
                     <SiTailwindcss className="w-16 h-16 text-blue-400" />
-                    {/* <SiVite className="w-16 h-16" /> */}
                     <Image
                         src="/vite.svg"
                         width={64}
@@ -79,7 +78,6 @@ const Skills = () => {
             title: "Files",
             value: (
                 <>
-                    <SiGit className="w-16 h-16 text-orange-700" />
                     <SiGithub className="w-16 h-16" />
                 </>
             ),
@@ -89,6 +87,7 @@ const Skills = () => {
             value: (
                 <>
                     <SiNpm className="w-16 h-16 text-red-500" />
+                    <SiGit className="w-16 h-16 text-orange-700" />
                 </>
             ),
         },
