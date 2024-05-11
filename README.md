@@ -1,19 +1,30 @@
-# With ♥ by vshakitskiy
+# React + TypeScript + Vite
 
-My personal site website written in Next.js using TypeScript.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Project Structure
+Currently, two official plugins are available:
 
-`components/Header.tsx` use `hooks/theme.ts` for changing theme.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-For getting discord data I use [Lanyard API](https://github.com/Phineas/lanyard) (`data/discord.ts`).
+## Expanding the ESLint configuration
 
-Some components require data from `data/index.ts`. All data types inside `data/types.ts`.
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-## Contributions
+- Configure the top-level `parserOptions` property like this:
 
-This project is Open Source. Your feedback and contributions are welcome here.
+```js
+export default {
+  // other rules...
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: ['./tsconfig.json', './tsconfig.node.json'],
+    tsconfigRootDir: __dirname,
+  },
+}
+```
 
-## Thanks
-
-[@Insticthere](https://github.com/Insticthere) for open sourcing [his website](https://github.com/Insticthere/Instict.dev)!
+- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
+- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
