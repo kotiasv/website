@@ -1,3 +1,5 @@
+# THIS WEBSITE IS GOING TO BE OUTDATED SOON.
+
 # With ♥ by vshakitskiy
 
 My personal site website written in Next.js using TypeScript.
